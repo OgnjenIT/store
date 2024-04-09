@@ -29,7 +29,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const productID = window.location.search.slice(4)
 
     const product = store.find(product => {
-        return product.id = productID
+        return product.id === productID
     })
     const { name, company, image, price, colors } = product
 
