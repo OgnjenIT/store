@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O nama | Prodavnica</title>
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+
+  <!-- styles css -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar page">
+      <div class="nav-center">
+        <div>
+          <button class="toggle-nav">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-links">
+            <li>
+              <a href="index.html" class="nav-link">pocetna</a>
+            </li>
+            <li>
+              <a href="products.html" class="nav-link">proizvodi</a>
+            </li>
+            <li>
+              <a href="about.html" class="nav-link">o nama</a>
+            </li>
+          </ul>
+        </div>
+        <!-- logo -->
+        <img src="./images/logo-black.svg" class="nav-logo" alt="logo">
+        <!-- kraj logo-a -->
+        <!-- kosarica ikonica -->
+        <div class="toggle-container">
+          <button class="toggle-cart">
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+          <span class="cart-item-count">1</span>
+        </div>
+        <!-- kraj kosarice ikonice -->
+      </div>
+    </nav>
+    <!-- kraj navbara -->
+    <!-- hero -->
+    <section class="page-hero">
+      <div class="section-center">
+        <h3 class="page-hero-title">
+          pocetna / o nama
+        </h3>
+      </div>
+    </section>
+    <!-- kraj hero-a -->
+    <!-- sidebar -->
+    <div class="sidebar-overlay">
+      <aside class="sidebar">
+        <button class="sidebar-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <!-- navigacija -->
+        <ul class="sidebar-links">
+          <li>
+            <a href="index.html" class="sidebar-link">
+              <i class="fas fa-home fa-fw"></i>
+              pocetna
+            </a>
+          </li>
+          <li>
+            <a href="products.html" class="sidebar-link">
+              <i class="fas fa-couch fa-fw"></i>
+              proizvodi
+            </a>
+          </li>
+          <li>
+            <a href="about.html" class="sidebar-link">
+              <i class="fas fa-book fa-fw"></i>
+              o nama
+            </a>
+          </li>
+        </ul>
+        <!-- kraj navigacije -->
+      </aside>
+    </div>
+    <!-- kraj sidebar-a -->
+    <!-- kosarica -->
+    <div class="cart-overlay">
+      <aside class="cart">
+        <button class="cart-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <header>
+          <h3 class="text-slanted">vasa kosarica</h3>
+        </header>
+        <!-- elementi kosarice -->
+        <div class="cart-items">
+        </div>
+        <!-- kraj elemenata kosarice -->
+        <!-- footer -->
+        <h3 class="cart-total text-slanted">
+          total : $13.99
+        </h3>
+        <button class="cart-checkout btn">naplata</button>
+        <!-- kraj footer-a -->
+      </aside>
+    </div>
+    <!-- kraj kosarice -->
+    <!-- about -->
+    <section class="section section-center about-page">
+      <div class="title">
+        <h2>
+          <span>/</span>
+          nasa istorija
+        </h2>
+      </div>
+      <p class="about-text">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi ducimus minus nostrum culpa laboriosam ad ullam optio ab iusto laudantium quasi libero corporis explicabo sint perferendis deserunt distinctio amet quaerat, voluptatibus nam tempora aliquam iste? Magni laborum hic, labore officiis minima ab distinctio sint necessitatibus veniam temporibus aut inventore dignissimos veritatis et dolore aperiam iure ut quasi sapiente fugit blanditiis architecto sit optio ullam. Quaerat illo tempora aut impedit, natus quos ex. Exercitationem, neque perferendis impedit nesciunt incidunt ipsam sit?
+      </p>
+    </section>
+    <!-- kraj about-a -->
+  <script type="module" src="./src/pages/about.js"></script>
+</body>
+
+</html>
