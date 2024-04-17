@@ -6,7 +6,6 @@ import '../cart/setupCart.js';
 import { addToCart } from '../cart/setupCart.js';
 import { singleProductUrl, getElement, formatPrice } from '../utils.js';
 import { store } from '../store.js';
-
 // selections
 const loading = getElement('.page-loading');
 const centerDOM = getElement('.single-product-center');
@@ -24,25 +23,31 @@ const cartBtn = getElement('.addToCartBtn');
 
 // show product when page loads
 
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded",()=>{
     loading.style.display = 'none'
     const productID = window.location.search.slice(4)
-
-    const product = store.find(product => {
+    
+    const product = store.find(product=>{
         return product.id === productID
     })
-    const { name, company, image, price, colors } = product
-
+    const { name, company, image, price, colors} = product
+    
     document.title = `${name.toUpperCase()} | Prodavnica`
-    pageTitleDOM.innerHTML = `Proizvod | ${name}`
+
+    pageTitleDOM.innerHTML = `Proizvod / ${name}`
     imgDOM.src = image
     companyDOM.innerHTML = company
     priceDOM.innerHTML = formatPrice(price)
-    titleDOM.innerHTML = name
-    colors.forEach(color => {
+    titleDOM.innerHTML =   name
+    colors.forEach(color=>{
         const span = document.createElement("span")
         span.classList.add("product-color")
         span.style.backgroundColor = color
         colorsDOM.appendChild(span)
     })
+    const addToCartBtn = getElement(".addToCartBtn")
+
+    addToCartBtn.addEventListener("click", ()=>{
+        addToCart(productID)
+    }) 
 })
